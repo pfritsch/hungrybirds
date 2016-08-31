@@ -1,0 +1,19 @@
+// Description Lists
+// -----------------------------------------------------------------------------
+dt {
+  font-weight: 300;
+  color: $text-muted;
+}
+
+// Horizontal description lists
+// -----------------------------------------------------------------------------
+.dl-horizontal {
+  dd {
+    margin-bottom: 12px;
+  }
+  @media (min-width: $dl-horizontal-breakpoint) {
+    dt {
+      text-align: left;
+    }
+  }
+}

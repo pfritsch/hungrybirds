@@ -1,0 +1,56 @@
+.form-control {
+  padding-top: ($padding-base-vertical - 1);
+  padding-bottom: ($padding-base-vertical - 1);
+  margin-bottom: $padding-base-vertical;
+}
+.form-control-static {
+  padding-top: $padding-base-vertical;
+  padding-bottom: $padding-base-vertical;
+  min-height: $line-height-computed + $padding-base-vertical;
+}
+.form-horizontal .control-label {
+  @media (min-width: $grid-float-breakpoint){
+    text-align: inherit;
+  }
+}
+label {
+  margin-bottom: 0;
+  font-weight: 600;
+  color: $text-muted;
+}
+.label-fixedsize {
+  display: inline-block;
+  float: left;
+  width: 48px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.radio label,
+.checkbox label {
+  color: $input-color;
+}
+textarea.form-control.expanding {
+  height: $input-height-base;
+  transition: height 200ms ease;
+  &:focus {
+    height: $input-height-base * 3;
+    float: left;
+  }
+  & + .input-group-btn {
+    vertical-align: top;
+  }
+}
+.input-group {
+  margin-bottom: $padding-base-vertical;
+}
+.radio,
+.checkbox {
+    padding: 6px 0;
+    margin: 0 0 6px;
+}
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    margin-top: 6px;
+}

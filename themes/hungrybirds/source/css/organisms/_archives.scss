@@ -1,0 +1,23 @@
+.archives-wrap {
+  padding: rem-calc(60) 0;
+}
+
+.archives {
+  display: flex;
+  margin: 0 rem-calc(-12);
+}
+.archive-article {
+  flex: 1;
+  padding: rem-calc(12);
+}
+.archive-article-inner {
+  padding: rem-calc(12 24 18);
+  background: #E4E0D9;
+  border-radius: 2px;
+}
+.archive-article-title {
+  margin: 0;
+  & a {
+    color: #2B5063;
+  }
+}

@@ -1,0 +1,69 @@
+.header {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding: rem-calc(24) 0 0;
+  text-align: center;
+  background: #2B5063;
+
+  &.has-post {
+    height: 50vh;
+    max-height: rem-calc(720);
+    min-height: rem-calc(480);
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+
+  & > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &.has-post::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50%;
+    background-image: linear-gradient(-180deg, #2B5063 -50%, rgba(#2B5063, 0) 100%);
+    z-index: 0;
+  }
+}
+.header-logo {
+  @include susy-breakpoint($break-medium) {
+    @include span(2 of 6);
+    text-align: left;
+  }
+  @include susy-breakpoint($break-large) {
+    margin-left: rem-calc(-36);
+  }
+}
+.header-nav {
+  @include susy-breakpoint($break-medium) {
+    @include span(2 last of 6);
+    text-align: right;
+  }
+  @include susy-breakpoint($break-large) {
+    margin-right: rem-calc(-36);
+  }
+}
+.header-hero {
+  position: absolute;
+  top: rem-calc(144);
+  left: 0;
+  right: 0;
+
+  @media screen and (max-width: $break-medium) {
+    top: auto;
+    bottom: rem-calc(72);
+  }
+
+  @media screen and (min-width: $break-small) and (min-height: 720px) {
+    top: auto;
+    bottom: rem-calc(72);
+  }
+}

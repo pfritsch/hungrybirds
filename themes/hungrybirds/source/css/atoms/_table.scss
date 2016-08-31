@@ -1,0 +1,62 @@
+.table {
+  margin-bottom: 0;
+
+  & > thead > tr,
+  & > tbody > tr,
+  & > tfoot > tr {
+    transition: background 200ms ease;
+  }
+
+  & > tbody > tr.active,
+  & > tfoot > tr.active {
+    color: white !important;
+  }
+
+  &.table-vertical-middle > thead > tr > th,
+  &.table-vertical-middle > thead > tr > td,
+  &.table-vertical-middle > tbody > tr > th,
+  &.table-vertical-middle > tbody > tr > td,
+  &.table-vertical-middle > tfoot > tr > th,
+  &.table-vertical-middle > tfoot > tr > td {
+    vertical-align: middle;
+  }
+
+  & > thead > tr > th:first-child,
+  & > thead > tr > td:first-child,
+  & > tbody > tr > th:first-child,
+  & > tbody > tr > td:first-child,
+  & > tfoot > tr > th:first-child,
+  & > tfoot > tr > td:first-child {
+    padding-left: $padding-base-horizontal * 2;
+  }
+  & > thead > tr > th:last-child,
+  & > thead > tr > td:last-child,
+  & > tbody > tr > th:last-child,
+  & > tbody > tr > td:last-child,
+  & > tfoot > tr > th:last-child,
+  & > tfoot > tr > td:last-child {
+    padding-right: $padding-base-horizontal * 2;
+  }
+
+  &.nopadding > thead > tr > th:first-child,
+  &.nopadding > thead > tr > td:first-child,
+  &.nopadding > tbody > tr > th:first-child,
+  &.nopadding > tbody > tr > td:first-child,
+  &.nopadding > tfoot > tr > th:first-child,
+  &.nopadding > tfoot > tr > td:first-child {
+    padding-left: 0;
+  }
+  &.nopadding > thead > tr > th:last-child,
+  &.nopadding > thead > tr > td:last-child,
+  &.nopadding > tbody > tr > th:last-child,
+  &.nopadding > tbody > tr > td:last-child,
+  &.nopadding > tfoot > tr > th:last-child,
+  &.nopadding > tfoot > tr > td:last-child {
+    padding-right: 0;
+  }
+
+  & > tfoot > tr.total > th,
+  & > tfoot > tr.total > td {
+    border-top: 2px solid $gray-dark;
+  }
+}

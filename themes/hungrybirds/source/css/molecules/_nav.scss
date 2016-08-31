@@ -1,0 +1,69 @@
+a.nav-main-item {
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  line-height: rem-calc(24);
+  margin: 0 0 0 rem-calc(24);
+  padding: rem-calc(5) 0 rem-calc(6);
+  border-bottom: 1px solid transparent;
+  text-transform: uppercase;
+  transition: border 300ms ease;
+  &:hover,
+  &:focus  {
+    color: white;
+  }
+  &:first-child {
+    margin-left: 0;
+  }
+  &.current,
+  &:hover {
+    border-bottom: 1px solid white;
+  }
+}
+.nav-secondary {
+  padding-top: rem-calc(60);
+}
+a.nav-secondary-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 200ms ease;
+  color: #2C2A27;
+  &:hover,
+  &:focus {
+    .nav-secondary-title {
+      color: #D94218;
+    }
+  }
+}
+.nav-secondary-caption {
+  opacity: 0.6;
+}
+.nav-secondary-title {
+  display: block;
+  font-family: "trashhand", Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+  font-size: rem-calc(21);
+  line-height: rem-calc(24);
+  font-weight: normal;
+  letter-spacing: 0px;
+  transition: color 200ms ease;
+}
+.nav-secondary-left {
+  min-height: 1px;
+  @include span(2 of 6);
+  &:hover,
+  &:focus {
+    transform: translate(rem-calc(12), 0);
+  }
+}
+.nav-secondary-center {
+  text-align: center;
+  @include span(2 of 6);
+}
+.nav-secondary-right {
+  @include span(2 last of 6);
+  text-align: right;
+  &:hover,
+  &:focus {
+    transform: translate(rem-calc(-12), 0);
+  }
+}

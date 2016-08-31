@@ -1,0 +1,49 @@
+
+<%- partial('_partial/header', {cache: !config.relative_link}) %>
+
+<article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope itemprop="blogPost">
+  <div class="grid-container">
+
+    <div class="article-content">
+      <%- partial('post/gallery') %>
+      <% if (post.link){ %>
+        <header class="article-header">
+          <%- partial('post/title', {class_name: 'article-title'}) %>
+        </header>
+      <% } %>
+      <div class="article-entry" itemprop="articleBody">
+        <% if (post.excerpt && index){ %>
+          <%- post.excerpt %>
+          <% if (theme.excerpt_link){ %>
+            <p class="article-more-link">
+              <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+            </p>
+          <% } %>
+        <% } else { %>
+          <%- post.content %>
+        <% } %>
+      </div>
+    </div>
+
+    <% if (!isPage){ %>
+      <div class="article-sidebar">
+        <%- partial('_partial/sidebar', {post: post}) %>
+      </div>
+      <!-- <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link"><%= __('share') %></a> -->
+    <% } %>
+  </div>
+</article>
+
+<section class="footer-pre">
+  <% if(!isPage){ %>
+    <%- partial('post/nav') %>
+  <% } %>
+
+  <div id="comments" class="grid-container">
+    <% if(!isPage && theme.disqus_shortname){ %>
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      </div>
+    <% } %>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+<% if (pagination == 1){ %>
+    <% page.posts.sort('date', -1).limit(1).each(function(post){ %>
+      <%- partial('article', {post: post, index: true}) %>
+    <% }) %>
+<% } else if (pagination == 2){ %>
+  <%- partial('_partial/header', {post: false}, {cache: !config.relative_link}) %>
+  <% page.posts.each(function(post){ %>
+    <%- partial('article', {post: post, index: true}) %>
+  <% }) %>
+<% } else { %>
+  <%- partial('_partial/header', {post: false}, {cache: !config.relative_link}) %>
+
+  <iframe src="https://planificateur.a-contresens.net/embed-itineraire/6564-carte?flag=0&style=classic&climate=0&itinerary=0&co2=0&budget=0&centercurrentstep=1&stepnumber=1&futurstep=transparent" width="100%" height="600px" style="max-height:50vh" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+  <div class="grid-container">
+    <% var last; %>
+    <% page.posts.each(function(post, i){ %>
+      <% var year = post.date.year(); %>
+      <% if (last != year){ %>
+        <% if (last != null){ %>
+          </div></section>
+        <% } %>
+        <% last = year; %>
+        <section class="archives-wrap">
+          <div class="archive-year-wrap">
+            <a href="<%- url_for(config.archive_dir + '/' + year) %>" class="archive-year"><%= year %></a>
+          </div>
+          <div class="archives">
+      <% } %>
+      <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+    <% }) %>
+    <% if (page.posts.length){ %>
+      </div></section>
+    <% } %>
+  </div>
+<% } %>
+<% if (page.total > 1){ %>
+  <nav id="page-nav">
+    <%- paginator({
+      prev_text: "&laquo; __('prev')",
+      next_text: "__('next') &raquo;"
+    }) %>
+  </nav>
+<% } %>

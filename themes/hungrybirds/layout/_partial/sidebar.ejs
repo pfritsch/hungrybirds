@@ -1,0 +1,15 @@
+<aside class="sidebar" role="sidebar">
+  <div class="sidebar-container">
+    <% theme.widgets.forEach(function(widget){ %>
+      <%- partial('_widget/' + widget) %>
+
+    <% }) %>
+    <%- partial('post/category') %>
+    <%- partial('post/tag') %>
+    <% if (post.comments && config.disqus_shortname){ %>
+      <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link"><%= __('comment') %></a>
+    <% } %>
+
+    <img src="/images/birds.svg" alt="Birds" class="sidebar-illus"/>
+  </div>
+</aside>

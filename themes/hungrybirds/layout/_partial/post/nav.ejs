@@ -1,0 +1,38 @@
+<% if (post.next || post.prev || index){ %>
+<nav class="nav-secondary">
+  <div class="grid-container">
+    <div class="nav-secondary-left">
+    <% if (post.next){ %>
+      <a href="<%- url_for(post.next.path) %>" id="article-nav-older" class="nav-secondary-link">
+        <span class="nav-secondary-caption"><%= __('prev_post') %></span>
+        <strong class="nav-secondary-title"><%= post.next.title %></strong>
+      </a>
+    <% } %>
+    </div>
+
+    <div class="nav-secondary-center">
+    <% if (index){ %>
+      <a href="<%- url_for(post.path) %>#comments" class="nav-secondary-link">
+        <span class="nav-secondary-caption">Commentaires</span>
+        <strong class="nav-secondary-title" data-disqus-url="<%- url_for(post.path) %>">Nous laisser un mot</strong>
+      </a>
+    <% } %>
+    </div>
+
+    <div class="nav-secondary-right">
+    <% if (post.prev){ %>
+      <a href="<%- url_for(post.prev.path) %>" id="article-nav-newer" class="nav-secondary-link">
+        <span class="nav-secondary-caption"><%= __('next_post') %></span>
+        <strong class="nav-secondary-title">
+          <% if (post.prev.title){ %>
+            <%= post.prev.title %>
+          <% } else { %>
+            (no title)
+          <% } %>
+        </strong>
+      </a>
+    <% } %>
+    </div>
+  </div>
+</nav>
+<% } %>

@@ -1,0 +1,9 @@
+p {
+  margin-top: $padding-base-vertical;
+  @media (min-width: $grid-float-breakpoint){
+    margin-top: $padding-large-vertical;
+  }
+  p:first-child {
+    margin-top: 0;
+  }
+}

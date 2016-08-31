@@ -1,0 +1,172 @@
+@import "normalize";
+@import "breakpoint";
+@import "susy";
+@import "baguetteBox.min";
+
+// Font
+// -----------------------------------------------------------------------------
+@font-face {
+    font-family: 'Affogato';
+    src: url('../font/Affogato-Bold.eot');
+    src: url('../font/Affogato-Bold.eot?#iefix') format('embedded-opentype'),
+    	 url('../font/Affogato-Bold.woff') format('woff'),
+         url('../font/Affogato-Bold.woff2') format('woff2'),
+         url('../font/Affogato-Bold.ttf')  format('truetype'),
+         url('../font/Affogato-Bold.svg') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Affogato';
+    src: url('../font/Affogato-Regular.eot');
+    src: url('../font/Affogato-Regular.eot?#iefix') format('embedded-opentype'),
+    	 url('../font/Affogato-Regular.woff') format('woff'),
+         url('../font/Affogato-Regular.woff2') format('woff2'),
+         url('../font/Affogato-Regular.ttf')  format('truetype'),
+         url('../font/Affogato-Regular.svg') format('svg');
+     font-weight: normal;
+     font-style: normal;
+}
+@font-face {
+    font-family: 'trashhand';
+    src: url('../font/TrashHand-webfont.eot');
+    src: url('../font/TrashHand-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/TrashHand-webfont.woff') format('woff'),
+         url('../font/TrashHand-webfont.ttf') format('truetype'),
+         url('../font/TrashHand-webfont.svg#trashhand') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+// Settings
+// -----------------------------------------------------------------------------
+// Set default variables
+// -----------------------------------------------------------------------------
+$base-font: 16px !default;
+
+$susy: (
+  flow: ltr,
+  math: static,
+  output: float,
+  gutter-position: after,
+  container: auto,
+  container-position: center,
+  columns: 6,
+  gutters: 0.185,
+  column-width: 8.250em,
+  global-box-sizing: content-box,
+  last-flow: to,
+  debug: (
+    image: hide,
+    color: rgba(#66f, .25),
+    output: background,
+    toggle: top right,
+  ),
+  use-custom: (
+    background-image: true,
+    background-options: false,
+    box-sizing: true,
+    clearfix: false,
+    rem: true,
+  )
+);
+// Breakpoints (size, columns or columns number)
+$break-small: 30em;
+$break-medium: 60em;
+$break-large: 80em;
+
+$color-primary: #9EAF56;
+$color-secondary: #418D4B;
+
+// Functions & Mixins
+// -----------------------------------------------------------------------------
+
+// Strip Unit
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// Convert to REM
+@function convert-to-rem($value, $base-value: $base-font) {
+  $value: strip-unit($value) / strip-unit($base-value) * 1rem;
+  @if ($value == 0rem) { $value: 0; } // Turn 0rem into 0
+  @return $value;
+}
+
+// REM calc
+@function rem-calc($values, $base-value: $base-font) {
+  $max: length($values);
+
+  @if $max == 1 { @return convert-to-rem(nth($values, 1), $base-value); }
+
+  $remValues: ();
+  @for $i from 1 through $max {
+    $remValues: append($remValues, convert-to-rem(nth($values, $i), $base-value));
+  }
+  @return $remValues;
+}
+
+// Reset list
+@mixin reset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Commons
+// -----------------------------------------------------------------------------
+// Set default variables
+// -----------------------------------------------------------------------------
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  background: #51504E;
+  color: #E4E0D9;
+  line-height: rem-calc(24);
+  font-family: "Affogato", "Helvetica Neue", Arial, Helvetica, sans-serif;
+  border-top: rem-calc(6) solid #2B5063;
+}
+.main {
+  background: white;
+  color: #2C2A27;
+}
+strong {
+  font-weight: 600;
+}
+
+/* Atoms */
+// -----------------------------------------------------------------------------
+@import "atoms/figure";
+@import "atoms/logo";
+@import "atoms/map";
+@import "atoms/anchor";
+@import "atoms/img";
+// @import "atoms/button";
+// @import "atoms/embed";
+// @import "atoms/form";
+// @import "atoms/heading";
+// @import "atoms/icon";
+// @import "atoms/list";
+// @import "atoms/paragraph";
+// @import "atoms/table";
+
+/* Molecules */
+// -----------------------------------------------------------------------------
+@import "molecules/header";
+@import "molecules/footer";
+@import "molecules/nav";
+@import "molecules/sidebar";
+
+/* Organisms */
+// -----------------------------------------------------------------------------
+@import "organisms/grid";
+@import "organisms/article";
+@import "organisms/archives";
+
+/* Templates */
+// -----------------------------------------------------------------------------

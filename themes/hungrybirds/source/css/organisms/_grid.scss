@@ -1,0 +1,9 @@
+.grid-container {
+  @include container(3 fluid 100%);
+  padding: 0 rem-calc(24);
+
+  @include susy-breakpoint($break-medium) {
+    @include container;
+    padding: 0;
+  }
+}

@@ -1,0 +1,17 @@
+.btn {
+  padding: ($padding-base-vertical - 1) (($padding-base-horizontal * 2) - 1);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  &:not(.btn-link) {
+    box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.20);
+  }
+}
+.btn > [class^="icon"]:not(.is-inline),
+.btn > [class*=" icon"]:not(.is-inline) {
+  margin-bottom: -2px;
+  & + span {
+    margin-left: 4px;
+  }
+}

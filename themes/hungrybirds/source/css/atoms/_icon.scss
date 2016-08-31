@@ -1,0 +1,29 @@
+[id^="icon"] path,
+[id*=" icon"] path {
+  fill: currentColor;
+}
+[class^="icon"],
+[class*=" icon"] {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+
+  &.is-inline {
+    float: left;
+    margin-right: 0.5em;
+    width: 1em;
+    height: 1em * $line-height-base;
+  }
+  &.is-medium {
+    width: 24px;
+    height: 24px;
+  }
+  &.is-big {
+    width: 36px;
+    height: 36px;
+  }
+}
+.icon-link {
+ line-height: 0;
+}

@@ -1,0 +1,16 @@
+<footer class="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+    <div class="grid-container">
+
+      <ul class="footer-infos">
+        <li>&copy; <%= date(new Date(), 'YYYY') %></li>
+        <li>Réalisé avec ♥ par Pierre et Val</li>
+        <li><%= __('powered_by') %> <a href="http://hexo.io/" target="_blank">Hexo</a></li>
+        <% if (theme.rss){ %>
+          <li><a id="nav-rss-link" class="nav-icon" href="<%- theme.rss %>" title="<%= __('rss_feed') %>">RSS</a></li>
+        <% } %>
+    </ul>
+  </div>
+</footer>

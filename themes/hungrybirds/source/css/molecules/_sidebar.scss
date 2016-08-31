@@ -1,0 +1,16 @@
+.sidebar {
+  margin-top: rem-calc(60);
+  line-height: rem-calc(24);
+  color: #504D49;
+  text-align: center;
+  background: #E4E0D9;
+  margin-bottom: rem-calc(96);
+  border-radius: 2px;
+  @include susy-breakpoint($break-large) {
+    margin-left: rem-calc(36);
+    margin-right: rem-calc(-36);
+  }
+}
+.sidebar-illus {
+  margin-bottom: rem-calc(-48);
+}

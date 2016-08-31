@@ -1,0 +1,30 @@
+.footer {
+  color: #E4E0D9;
+  font-size: rem-calc(14);
+  text-align: center;
+  padding: rem-calc(36) 0;
+
+  a {
+    color: white;
+  }
+}
+.footer-infos {
+  list-style: none;
+  margin: 0;
+  li {
+    display: inline-block;
+    margin-left: rem-calc(12);
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+.footer-pre {
+  background-color: #E4E0D9;
+  padding-bottom: rem-calc(60);
+
+  #disqus_thread {
+    padding-top: rem-calc(60);
+  }
+}

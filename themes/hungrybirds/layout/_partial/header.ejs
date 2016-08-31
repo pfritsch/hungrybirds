@@ -1,0 +1,28 @@
+<header id="header" class="header <% if (post){ %>has-post<% } %>" <% if (post.url_image){ %> style="background-image: url('<%= post.url_image %>')"<% } %>>
+  <div class="grid-container">
+    <% if (index){ %>
+      <h1 class="header-logo logo"><a href="<%- url_for() %>" <% if (theme.subtitle){ %> title="<%= theme.subtitle %>"<% } %>><%- image_tag('images/logo.svg', {alt: config.title}) %></a></h1>
+    <% } else { %>
+      <span class="header-logo logo"><a href="<%- url_for() %>" <% if (theme.subtitle){ %> title="<%= theme.subtitle %>"<% } %>><%- image_tag('images/logo.svg', {alt: config.title}) %></a></span>
+    <% } %>
+    <nav class="header-nav nav-main">
+      <% for (var i in theme.menu){%>
+        <a class="nav-main-item <% if(i === active) {%>current<%} %>" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+      <% } %>
+    </nav>
+  </div>
+  <% if (post){ %>
+    <div class="header-hero">
+      <div class="grid-container">
+        <%- partial('post/title', {class_name: 'article-title'}) %>
+        <p class="article-meta">
+          <% if (!isPage){ %>
+            <%- partial('post/date', {class_name: 'article-date', date_format: null}) %> par <%= post.author %>
+          <% } else { %>
+            <%= post.author %>
+          <% } %>
+        </p>
+      </div>
+    </div>
+  <% } %>
+</header>
