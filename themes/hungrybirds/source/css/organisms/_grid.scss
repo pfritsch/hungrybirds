@@ -3,7 +3,7 @@
   padding: 0 rem-calc(24);
 
   @include susy-breakpoint($break-medium) {
-    @include container;
+    @include container();
     padding: 0;
   }
 }

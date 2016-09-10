@@ -2,9 +2,7 @@
   <div id="map" class="map" data-location="<%= post.place %>"></div>
   <p>
     Près de <strong><%= post.place %></strong><br>
-    <% if(post.timezone) {
-        var time = moment().tz(post.timezone).format("HH:mm");
-        %>
-      Actuellement il est <strong><%= time %></strong> là-bas.</p>
+    <% if(post.timezone) { %>
+      Actuellement il est <time data-timezone="<%= post.timezone %>" datetime="<% moment().format() %>" class="moment"></time> là-bas.</p>
     <% } %>
 <% } %>

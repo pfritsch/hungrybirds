@@ -25,6 +25,6 @@
     "hexo-url-image": "^0.1.0"
   },
   "scripts":{
-    "deploy" : "hexo generate && cp .htaccess public && hexo deploy"
+    "deploy" : "hexo clean && hexo generate && cp .htaccess public && hexo deploy"
   }
 }

@@ -39,7 +39,7 @@
     text-align: left;
   }
   @include susy-breakpoint($break-large) {
-    margin-left: rem-calc(-36);
+    margin-left: rem-calc(-24);
   }
 }
 .header-nav {
@@ -48,7 +48,7 @@
     text-align: right;
   }
   @include susy-breakpoint($break-large) {
-    margin-right: rem-calc(-36);
+    margin-right: rem-calc(-24);
   }
 }
 .header-hero {

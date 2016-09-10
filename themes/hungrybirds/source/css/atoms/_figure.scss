@@ -1,19 +1,25 @@
 figure {
   margin: 0;
+  a {
+    display: inline-block;
+    width: 100%;
+    line-height: 0;
+  }
   img {
-    max-width: 100%;
+    width: 100%;
   }
   figcaption {
-    font-size: rem-calc(14);
+    font-size: rem-calc(16);
     color: #4A4A4A;
     line-height: rem-calc(24);
+    opacity: 0.8;
   }
 }
 .figure-100 {
-  max-width: 100%;
+  width: 100%;
   @include susy-breakpoint($break-large) {
     max-width: none;
-    margin-left: rem-calc(-36);
+    margin-left: rem-calc(-24);
   }
 }
 
@@ -48,6 +54,6 @@ figure {
   }
   @include susy-breakpoint($break-large) {
     max-width: none;
-    margin-left: rem-calc(-48);
+    margin-left: rem-calc(-24);
   }
 }

@@ -19,7 +19,7 @@
 
   .article-entry > p:first-child {
     @include susy-breakpoint($break-large) {
-      margin-left: rem-calc(-36);
+      margin-left: rem-calc(-24);
     }
   }
 }
