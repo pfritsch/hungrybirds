@@ -24,7 +24,7 @@ Tweetez-moi: [@fritschpierre](https://twitter.com/pierrefritsch)
 ## Merci pour votre soutien, vos conseils <br>et vos encouragements!
 
 __Famille__
- Martine, Philippe, Catherine, Serge, Jean, Paulette, Jeanine, Fernand, Germaine, Roger, Jérôme, Emeline, Sam, Sonia, Marc, Christophe, Nicole, Christine, Steph, Marie-Claire, Guy, Kiki, Giorgio, Jean-Claude, Philala, Céline... et tous les cousin(e)s!
+ Martine, Philippe, Catherine, Serge, Jean, Paulette, Jeanine, Fernand, Germaine, Roger, Jérôme, Emeline, Sam, Sonia, Marc, Christophe, Nicole, Christine, Steph, Simone, Guy, Marie-Claire, Guy, Kiki, Giorgio, Jean-Claude, Philala, Céline... et tous les cousin(e)s!
 
 __Amis & collègues__
 Guillaume, Mag, Philou, Milou, Aline, Marie-Line, Jérémie, Amandine, Anne-So, Florent, Noémie, Aline, Léo, Astrid, Maximilien, Frank, Elodie, Juju, Veronica, Roland, Auxi, Phippu, Mayra, Josh, Martin et les autres Puzzlers, Pascal, Miriam, Jean-François, Jean, Florent, Christine, Claude, Liselotte, Sergio, Marie, Denis, Jenni, Juergen, Ursula, Alain, Ricarda, Olivier, Sébastien, Lionel, Roland, Ingrid, Pascal, Béatrice, Alina ainsi que tous les collègues VCH et VSA
