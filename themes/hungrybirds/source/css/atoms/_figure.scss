@@ -27,9 +27,14 @@ figure {
   display: flex;
   flex-wrap: wrap;
   max-width: 100%;
-  & > * {
+  & > figure {
     line-height: 0;
     padding-top: rem-calc(12);
+  }
+  & > p {
+    @include susy-breakpoint($break-small) {
+      padding: rem-calc(12 0 0 36);
+    }
   }
   br {
     display: none;

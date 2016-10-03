@@ -6,5 +6,5 @@ author: Pierre
 place:
 timezone: Europe/Zurich
 # http://php.net/manual/fr/timezones.php
-tags: 
+tags:
 ---

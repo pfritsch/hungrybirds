@@ -10,15 +10,6 @@
     <% } %>
     </div>
 
-    <div class="nav-secondary-center">
-    <% if (index){ %>
-      <a href="<%- url_for(post.path) %>#comments" class="nav-secondary-link">
-        <span class="nav-secondary-caption">Commentaires</span>
-        <strong class="nav-secondary-title" data-disqus-url="<%- url_for(post.path) %>">Nous laisser un mot</strong>
-      </a>
-    <% } %>
-    </div>
-
     <div class="nav-secondary-right">
     <% if (post.prev){ %>
       <a href="<%- url_for(post.prev.path) %>" id="article-nav-newer" class="nav-secondary-link">
@@ -33,6 +24,15 @@
       </a>
     <% } %>
     </div>
+    
+    <div class="nav-secondary-center">
+      <% if (index){ %>
+        <a href="<%- url_for(post.path) %>#comments" class="nav-secondary-link">
+          <span class="nav-secondary-caption">Commentaires</span>
+          <strong class="nav-secondary-title" data-disqus-url="<%- url_for(post.path) %>">Nous laisser un mot</strong>
+        </a>
+        <% } %>
+      </div>
   </div>
 </nav>
 <% } %>

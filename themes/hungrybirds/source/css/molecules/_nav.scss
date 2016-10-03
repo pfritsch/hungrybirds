@@ -49,18 +49,34 @@ a.nav-secondary-link {
 }
 .nav-secondary-left {
   min-height: 1px;
-  @include span(2 of 6);
+  float: left;
+  width: 50%;
+  @include susy-breakpoint($break-large) {
+    @include span(2 of 6);
+  }
   &:hover,
   &:focus {
     transform: translate(rem-calc(12), 0);
   }
 }
 .nav-secondary-center {
+  min-height: 1px;
   text-align: center;
-  @include span(2 of 6);
+  clear: both;
+  padding-top: rem-calc(48);
+  @include susy-breakpoint($break-large) {
+    @include span(2 of 6);
+    clear: none;
+    padding-top: 0;
+  }
 }
 .nav-secondary-right {
-  @include span(2 last of 6);
+  min-height: 1px;
+  float: right;
+  width: 50%;
+  @include susy-breakpoint($break-large) {
+    @include span(2 last of 6);
+  }
   text-align: right;
   &:hover,
   &:focus {
