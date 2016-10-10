@@ -1,14 +1,19 @@
 .archives-wrap {
   padding: rem-calc(60) 0;
 }
-
 .archives {
-  display: flex;
-  margin: 0 rem-calc(-12);
+  @include susy-breakpoint($break-small) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 rem-calc(-12);
+  }
 }
 .archive-article {
-  flex: 1;
-  padding: rem-calc(12);
+  padding-top: rem-calc(12);
+  @include susy-breakpoint($break-small) {
+    flex: 1;
+    padding: rem-calc(12);
+  }
 }
 .archive-article-inner {
   padding: rem-calc(12 24 18);

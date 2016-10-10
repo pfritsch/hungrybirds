@@ -12,7 +12,7 @@ timezone: Europe/Zurich
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://hungrybirds.toile-libre.org/
+url: http://www.hungrybirds.fr/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -106,11 +106,14 @@ feed:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ftpsync
-  host: ftp.toile-libre.org
-  user: pfritsch
-  pass: r77o,;mMhW$AJc9H
-  remote: /hungrybirds/hungrybirds.toile-libre.org-web/htdocs
-  port: 21
+  host: sftp.dc0.gpaas.net
+  user: 6645801
+  pass: B6Zt8h}cV7bxc/wX
+  remote: /lamp0/web/vhosts/www.hungrybirds.fr/htdocs
+  port: 22 hun
   ignore: /_WIP
   connections: 1
   verbose: false
+
+#pfritsch
+#r77o,;mMhW$AJc9H
