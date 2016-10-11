@@ -9,6 +9,7 @@
   }
 }
 .archive-article {
+  min-width: 50%;
   padding-top: rem-calc(12);
   @include susy-breakpoint($break-small) {
     flex: 1;
