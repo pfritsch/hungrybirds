@@ -1,7 +1,7 @@
 ---
 title: Amazing New York
 author: Pierre & Val
-timezone: Europe/Zurich
+timezone: America/New_York
 date: 2016-10-11 13:42:46
 url_image: amazing-new-york_cover.jpg
 place: New York City, NY USA

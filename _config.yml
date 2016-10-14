@@ -110,11 +110,10 @@ deploy:
   user: 6645801
   pass: B6Zt8h}cV7bxc/wX
   remote: /lamp0/web/vhosts/www.hungrybirds.fr/htdocs
-  port: 22 hun
+  port: 22
   ignore: /_WIP
   connections: 1
-  verbose: false
-
+  verbose: true
 
 #pfritsch
 #r77o,;mMhW$AJc9H

@@ -30,7 +30,7 @@ __Amis & collègues__
 Guillaume, Mag, Philou, Milou, Aline, Marie-Line, Jérémie, Amandine, Anne-So, Florent, Noémie, Aline, Léo, Astrid, Maximilien, Frank, Elodie, Céline, Julien, Juju, Veronica, Roland, Auxi, Phippu, Mayra, Josh, Martin et les autres Puzzlers, Pascal, Miriam, Jean-François, Jean, Florent, Christine, Claude, Liselotte, Sergio, Marie, Denis, Jenni, Juergen, Ursula, Alain, Ricarda, Olivier, Sébastien, Lionel, Roland, Ingrid, Pascal, Béatrice, Alina ainsi que tous les collègues VCH et VSA
 
 __Amis sur notre route__
-Odile, Jean-François, Pascal, Cécile, Virginie, Juere, Steven : on a hâte de vous revoir!
+Odile, Jean-François, Pascal, Manon, Carlin, Cécile, Virginie, Juere, Steven : on a hâte de vous revoir!
 
 __Amis d'amis__
-Anne-Claire, Bruno, Manon, Mariella et tous les cow-boys de Fontainebleau
+Anne-Claire, Bruno, Mariella et tous les cow-boys de Fontainebleau
